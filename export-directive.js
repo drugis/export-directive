@@ -1,6 +1,5 @@
 'use strict';
-/* globals angular */
-define(['lodash', 'd3', 'jQuery'], function(_, d3, $) {
+define(['angular', 'lodash', 'd3', 'jQuery'], function(angular, _, d3, $) {
   angular.module('export-directive', [])
     .directive('export', ['$compile',
       function($compile) {
