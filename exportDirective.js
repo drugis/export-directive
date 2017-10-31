@@ -63,14 +63,13 @@ define(['lodash', 'd3', 'jQuery'], function(_, d3, $) {
                 .attr('fill', 'white');
               $svgElement.find('.nv-axis path')
                 .attr('fill', 'none')
-                .attr('stroke', 'black')
-                ;
+                .attr('stroke', 'black');
               $svgElement.find('path.nv-line')
                 .attr('fill', 'none');
-              d3.selectAll('.nv-point')
+              d3.selectAll('.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point')
                 .style('stroke-opacity', 0)
                 .style('fill-opacity', 0);
-               d3.selectAll('text')
+              d3.selectAll('text')
                 .attr('font-family', 'sans-serif')
                 .style('font-size', '12px');
 
