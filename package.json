@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@bower_components/angular": "angular/bower-angular#~1.6.0",
+    "@bower_components/clipboard": "zenorocha/clipboard.js#^1.6.0",
+    "@bower_components/d3": "mbostock-bower/d3-bower#~3.5.5",
+    "@bower_components/jquery": "jquery/jquery-dist#~3.2.1",
+    "@bower_components/nvd3": "novus/nvd3#1.8.5"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
+  },
+  "scripts": {
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
+  }
+}
