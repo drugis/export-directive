@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@bower_components/angular@angular/bower-angular#~1.6.0":
+"@bower_components/angular@angular/bower-angular#~1.6.5":
   version "1.6.8"
   resolved "https://codeload.github.com/angular/bower-angular/tar.gz/f4be53fc72b2eb2c3c3d634aeacfc68673ea5e68"
 

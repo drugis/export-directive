@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@bower_components/angular": "angular/bower-angular#~1.6.0",
+    "@bower_components/angular": "angular/bower-angular#~1.6.5",
     "@bower_components/clipboard": "zenorocha/clipboard.js#^1.6.0",
     "@bower_components/d3": "mbostock-bower/d3-bower#~3.5.5",
     "@bower_components/jquery": "jquery/jquery-dist#~3.2.1",
