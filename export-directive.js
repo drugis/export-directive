@@ -1,8 +1,8 @@
 'use strict';
-define(['angular', 'lodash', 'd3', 'jQuery'], function(angular, _, d3, $) {
+define(['angular', 'lodash', 'd3'], function(angular, _, d3) {
   angular.module('export-directive', [])
-    .directive('export', ['$compile',
-      function($compile) {
+    .directive('export', ['$', '$compile',
+      function($, $compile) {
         return {
           restrict: 'A',
           scope: {
