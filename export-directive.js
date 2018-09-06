@@ -1,8 +1,8 @@
 'use strict';
 define(['angular', 'lodash', 'd3'], function(angular, _, d3) {
   angular.module('export-directive', [])
-    .directive('export', ['$', '$compile',
-      function($, $compile) {
+    .directive('export', ['$compile',
+      function($compile) {
         return {
           restrict: 'A',
           scope: {
@@ -10,14 +10,14 @@ define(['angular', 'lodash', 'd3'], function(angular, _, d3) {
             dontFloatSibling: '='
           },
           link: function(scope, element) {
-            var $element = $(element);
+            var $element = element;
             var btnElement = $compile('<button ng-click="exportElement()" class="button export-button info small">Export</button>')(scope);
             $element.after(btnElement);
             if (!scope.dontFloatSibling) {
               $element.css('float', 'left');
             }
 
-            if ($element.is('img')) {
+            if ($element[0].tagName === 'IMG') {
               scope.exportElement = _.partial(exportImage, $element[0]);
             } else if ($element.find('svg').length > 0) {
               scope.exportElement = _.partial(exportSvg, $element.find('svg'));
@@ -25,7 +25,7 @@ define(['angular', 'lodash', 'd3'], function(angular, _, d3) {
 
             function exportImage(sourceImage) {
               sourceImage.setAttribute('crossOrigin', 'anonymous');
-              var $canvasElement = $('<canvas/>')
+              var $canvasElement = angular.element('<canvas/>')
                 .prop({
                   width: sourceImage.width,
                   height: sourceImage.height
@@ -82,7 +82,7 @@ define(['angular', 'lodash', 'd3'], function(angular, _, d3) {
                 .innerHTML;
 
               var imgsrc = 'data:image/svg+xml;base64,' + btoa(html);
-              var img = $('<img />', {
+              var img = angular.element('<img />', {
                 src: imgsrc
               });
 
