@@ -2,25 +2,21 @@
 # yarn lockfile v1
 
 
-"@bower_components/angular@angular/bower-angular#~1.6.6":
-  version "1.6.9"
-  resolved "https://codeload.github.com/angular/bower-angular/tar.gz/2d507370407cecd2aa5c339ba3140966bce6006b"
+angular@~1.6.6:
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.10.tgz#eed3080a34d29d0f681ff119b18ce294e3f74826"
 
-"@bower_components/clipboard@zenorocha/clipboard.js#^1.6.0":
-  version "1.7.1"
-  resolved "https://codeload.github.com/zenorocha/clipboard.js/tar.gz/b6e6b80ab07eab03ce0d277515b3ed540773a330"
+clipboard@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.1.tgz#a12481e1c13d8a50f5f036b0560fe5d16d74e46a"
   dependencies:
     good-listener "^1.2.2"
     select "^1.1.2"
     tiny-emitter "^2.0.0"
 
-"@bower_components/d3@mbostock-bower/d3-bower#~3.5.6":
-  version "0.0.0"
-  resolved "https://codeload.github.com/mbostock-bower/d3-bower/tar.gz/7a826d211d5067867debf9ce24a9987e0cb02b6e"
-
-"@bower_components/jquery@jquery/jquery-dist#~3.2.1":
-  version "3.2.1"
-  resolved "https://codeload.github.com/jquery/jquery-dist/tar.gz/77d2a51d0520d2ee44173afdf4e40a9201f5964e"
+d3@~3.5.6:
+  version "3.5.17"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
 
 "@bower_components/lodash@lodash/lodash#~4.2.0":
   version "4.2.1"
@@ -35,6 +31,14 @@ good-listener@^1.2.2:
   resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
   dependencies:
     delegate "^3.1.2"
+
+jquery@~3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 select@^1.1.2:
   version "1.1.2"
