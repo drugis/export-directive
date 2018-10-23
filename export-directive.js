@@ -1,5 +1,5 @@
 'use strict';
-define(['angular', 'lodash', 'd3', 'jquery'], function(angular, _, d3, $) {
+define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, d3, $, base64) {
   angular.module('export-directive', [])
     .directive('export', ['$compile',
       function($compile) {
@@ -81,7 +81,7 @@ define(['angular', 'lodash', 'd3', 'jquery'], function(angular, _, d3, $) {
                 .parent()[0]
                 .innerHTML;
 
-              var imgsrc = 'data:image/svg+xml;base64,' + btoa(html);
+              var imgsrc = 'data:image/svg+xml;base64,' + base64.encode(html);
               var img = $('<img />', {
                 src: imgsrc
               });
