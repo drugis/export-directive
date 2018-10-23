@@ -1,5 +1,5 @@
 'use strict';
-define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, d3, $, base64) {
+define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, d3, $, jsbase64) {
   angular.module('export-directive', [])
     .directive('export', ['$compile',
       function($compile) {
@@ -10,6 +10,8 @@ define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, 
             dontFloatSibling: '='
           },
           link: function(scope, element) {
+            var base64 = jsbase64.Base64;
+
             var $element = $(element);
             var btnElement = $compile('<button ng-click="exportElement()" class="button export-button info small">Export</button>')(scope);
             $element.after(btnElement);
