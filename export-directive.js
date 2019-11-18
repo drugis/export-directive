@@ -10,6 +10,7 @@ define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, 
             dontFloatSibling: '='
           },
           link: function(scope, element) {
+            scope.exportElement = exportElement;
             var base64 = jsbase64.Base64;
 
             var $element = $(element);
@@ -19,10 +20,12 @@ define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, 
               $element.css('float', 'left');
             }
 
-            if ($element.is('img')) {
-              scope.exportElement = _.partial(exportImage, $element[0]);
-            } else if ($element.find('svg').length > 0) {
-              scope.exportElement = _.partial(exportSvg, $element.find('svg'));
+            function exportElement() {
+              if ($element.is('img')) {
+                exportImage($element[0]);
+              } else if ($element.find('svg').length > 0) {
+                exportSvg($element.find('svg'));
+              }
             }
 
             function exportImage(sourceImage) {
@@ -56,7 +59,7 @@ define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function(angular, _, 
               //can't set svg instructions as image src directly
               var image = createImage($svgElement);
               image[0].setAttribute('crossOrigin', 'anonymous');
-              image.on('load', _.partial(exportImage, image[0]));
+              exportImage(image[0]);
             }
 
             function createImage($svgElement) {
