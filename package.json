@@ -1,13 +1,12 @@
 {
   "name": "export-directive",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "export-directive.js",
   "dependencies": {
     "angular": "~1.7.8",
-    "clipboard": "~2.0.4",
     "d3": "~5.14.1",
     "jquery": "~3.4.0",
-    "js-base64": "^2.5.1",
+    "js-base64": "~2.5.1",
     "lodash": "~4.17.15"
   },
   "engines": {
