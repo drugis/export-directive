@@ -57,6 +57,7 @@ define(['angular', 'lodash', 'd3', 'jquery', 'js-base64'], function (
               .attr('font-family', 'sans-serif')
               .style('font-size', '12px');
             d3.selectAll('svg').style('background-color', 'white');
+            d3.selectAll('.nv-point-paths').style('visibility', 'hidden');
 
             var html = $svgElement
               .attr('height', $svgElement.height())
